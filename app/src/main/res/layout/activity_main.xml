@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+    <EditText
+            android:id="@+id/et1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+    <EditText
+            android:id="@+id/et2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+    <Button
+            android:id="@+id/btn1"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_dark"
+            android:text="divide"
+            android:onClick="division"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="357dp" />
+
+    <Button
+            android:id="@+id/btn2"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorAccent"
+            android:text="add"
+            android:onClick="addition"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="357dp"
+            tools:ignore="OnClick" />
+
+    <Button
+            android:id="@+id/bt3"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_dark"
+            android:text="multiply"
+            android:onClick="multiplication"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="357dp" />
+
+    <Button
+            android:id="@+id/btn4"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/colorPrimaryDark"
+            android:text="substract"
+            android:onClick="substraction"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="357dp"
+            tools:targetApi="lollipop" />
+
+    <EditText
+            android:id="@+id/tvResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="your answer is" />
+
+
+
+
+</LinearLayout>

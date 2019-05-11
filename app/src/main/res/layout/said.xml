@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+        //Declaration of components (editext & textview) and global variables (string and double)
+        EditText ed1, ed2;
+        String value1, value2;
+        Double val1, val2, total;
+        TextView tvResult;
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        //reference the components to the layout file
+        ed1 = findViewById(R.id.ed1);
+        ed2 = findViewById(R.id.ed2);
+
+        //Get the text entered in the editext and save it in the string
+        value1 = ed1.getText().toString();
+        value2 = ed2.getText().toString();
+
+        //Conver the sting to double
+        val1 = Double.parseDouble(value1);
+        val2 = Double.parseDouble(value2);
+        }
+
+        public void addition(View view) {
+        //do the addition and display the results in the textview
+        total = val1 + val2;
+        // tvResult.setText(total.toString());
+        String finalresult = String.valueof(total);
+        tvResult.setText(finalresult);
+        }
+
+        public void subtraction(View view) {
+        //do the subtraction and display the results in the textview
+        total = val1 - val2;
+        //tvResult.setText(total.toString());
+        String finalresult = String.valueof(total);
+        tvResult.setText(finalresult);
+        }
+        }
+
+
+
+
+        <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+    <EditText
+            android:id="@+id/et1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+    <EditText
+            android:id="@+id/et2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+    <Button
+            android:id="@+id/btn1"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_dark"
+            android:text="divide"
+            android:onClick="division"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="357dp" />
+
+    <Button
+            android:id="@+id/btn2"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorAccent"
+            android:text="add"
+            android:onClick="addition"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="357dp"
+            tools:ignore="OnClick" />
+
+    <Button
+            android:id="@+id/bt3"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_dark"
+            android:text="multiply"
+            android:onClick="multiplication"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="357dp" />
+
+    <Button
+            android:id="@+id/btn4"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/colorPrimaryDark"
+            android:text="substract"
+            android:onClick="substation"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="357dp"
+            tools:targetApi="lollipop" />
+
+    <EditText
+            android:id="@+id/et3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="your answer is" />
+
+
+</LinearLayout>
